@@ -1,50 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <link rel="stylesheet" href="css/styles.css" class="css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to KoKoaTalk</title>
+    <title>Something amazing will be yours!!</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span>No Service</span>
-        <i class="fas fa-wifi"></i>
-        <!-- To Do: Wifi Icon-->
-      </div>
-      <div class="status-bar__column">
-        <span>18:43</span>
-      </div>
-      <div class="status-bar__column">
-        <span>75%</span>
-        <i class="fas fa-battery-three-quarters fa-lg"></i>
-        <!-- Battery Icon -->
-        <i class="fas fa-bolt"></i>
-        <!-- Lightening Icon-->
-      </div>
+    <form class="hidden" id="login-form">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <button>Log In</button>
+    </form>
+    <h2 id="clock">00:00:00</h2>
+    <h1 class="hidden" id="greeting"></h1>
+    <form id="todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list"></ul>
+
+    <div id="quote">
+      <span></span>
+      <span></span>
     </div>
 
-    <header class="welcome-header">
-      <h1 class="welcome-header__title">Welcome to Kakaotalk</h1>
-      <p class="welcome-header__text">
-        If you have a Kakao Account, log in with your email or phone number.
-      </p>
-    </header>
-
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone number" />
-      <input type="text" placeholder="Password" />
-      <input type="submit" value="Log In" />
-      <input type="submit" value="Sign Up" />
-      <a href="#">Find Kokoa Account or Password</a>
-    </form>
-
-    <script
-      src="https://kit.fontawesome.com/6478f529f2.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 스크립트는 항상 바디 끝내기 직전에만 넣어라-->
+    <script src="Js/greeting.js"></script>
+    <script src="Js/clock.js"></script>
+    <script src="Js/quotes.js"></script>
+    <script src="Js/background.js"></script>
+    <script src="Js/todo.js"></script>
   </body>
 </html>
